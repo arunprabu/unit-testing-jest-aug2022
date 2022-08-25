@@ -1,0 +1,114 @@
+Traditional S/W Dev Methodology 
+---
+  Analysis 
+    Requirements
+      Design 
+        Development 
+          Testing 
+            Deployment 
+              Maintanance 
+
+
+Project Name: Calc 
+--
+  Resources: FRD, HLD, LLD 
+
+  Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA PASSED) => Deployment
+
+
+  Development
+  ---
+    add feature
+    ----
+      Prepare the Resources: Test Cases / Specs (Requirements)
+      ---
+        1. Input should be number 
+        2. Output also be a number;
+        3. If wrong inputs entered, add button should be disabled
+
+      function add(a, b){
+        if(typeof a === 'number' && typeof b == 'number'){
+          return a + b;
+        }
+      }
+
+      add(10, 20); // 30 
+      add("XYZ", 20); //
+      add(20, "20"); // 
+      add("$", 2320232); // 
+
+---
+
+Automated Testing 
+---
+  0. Static Type Checking 
+      Tools: TypeScript / FlowJS /PropTypes 
+
+  1. Unit Testing 
+    * Testing tiny unit of a component
+    * Testing the comp in isolation 
+    * Writing Test specs to test our code
+    Tools: JEST and Enzyme or JEST and React-Testing-Library
+      
+  2. Integration Testing 
+      * Teting comp with REST API.   
+      Tools: JEST and Enzyme or JEST and React-Testing-Library
+
+  3. End to End Testing / E2E
+      * Testing the whole app. 
+      Tools: Selenium, CypressJS, Protractor 
+
+Unit Testing in React JS (with Jest and Enzyme)
+--
+
+  Modern Approaches / Modern S/W dev methodology / Testing Approach 
+  ---
+    1. Test Driven Development (TDD)
+        * is a programming practice that instructs the dev to write the NEW CODE only if an automated test fails 
+
+        dev writes test spec => (instant feedback of failure) => dev should write the functionality => (instance feedback of success) => [CODE COMPLETE]
+
+        Tools: JEST (Framework and also a Test Runner), Enzyme, React-Testing-Library
+        Testing Pattern: AAA (Arrange, Act, Assert)
+
+    2. Behaviour Driven Development (BDD)
+        * is an agile s/w dev methodology
+        * in which an app is documented and designed around the behaviour the end user expects to expeience when interacting with it. 
+
+        dev writes test specs for the behavior => (instant feedback of failure)  => dev should write the functionality => (instance feedback of success) => [CODE COMPLETE]
+
+        Tools: JasmineJS 
+        Testing Pattern: Given/When/Then 
+
+
+    Code Coverage:
+    ---
+      Target: 80% 
+
+
+  ---
+
+What will we learn?
+1. How to Write test specs?
+2. Where to write test specs?
+3. How to setup the tools to test our functionality code against the identified test specs?
+   
+    
+========
+NPM Dependencies
+--
+  1. Project Dependencies
+      * packages needed for the project to work in prod environment 
+      examples: bootstrap, jquery, react, react-dom, react-router-dom, axios
+
+  2. Dev Dependencies 
+      * packages are needed ONLY during development 
+      examples: webpack, jest, react-testing-library, enzyme, typescript, jasmine, karma, nodemon 
+
+-------
+
+Let's create the project
+npx create-react-app unit-testing-jest-aug2022
+
+---
+  
