@@ -1,5 +1,6 @@
 import './App.css';
 import About from './components/About/About';
+import Company from './components/Company/Company';
 
 function App() {
   return (
@@ -7,6 +8,10 @@ function App() {
       <h1>Welcome to Unit Testing!!!</h1>
 
       <About />
+
+      <hr/>
+      <Company name="Cognizant"/>
+      
     </div>
   );
 }
