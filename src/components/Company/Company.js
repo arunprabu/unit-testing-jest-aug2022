@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 const Company = (props) => {
 
+  // const date = new Date();
+
   const [myCountry, setMyCountry] = useState('');
 
   const handleCountryNameChange = (event) => {
@@ -10,7 +12,7 @@ const Company = (props) => {
 
   return (
     <div>
-      <h2>Company | Testing Props, Events, States, Hooks, JSX and Snapshot</h2>
+      <h2>Company | Testing Props, Events, States, Hooks, JSX and Snapshot!!!</h2>
       <h3>Welcome to My Company's official Website!</h3>
       <div data-testid="companyNameEl">
         {props.name}
@@ -24,6 +26,7 @@ const Company = (props) => {
        placeholder='Enter Country' value={myCountry} 
        onChange={ handleCountryNameChange }/>
 
+      {/* <p>Last Updated: {date.toTimeString()}</p> */}
     </div>
   )
 }

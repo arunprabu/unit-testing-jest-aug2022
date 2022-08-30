@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyComponent should have right company comp snapshot 1`] = `
+<div>
+  <h2>
+    Company | Testing Props, Events, States, Hooks, JSX and Snapshot!!!
+  </h2>
+  <h3>
+    Welcome to My Company's official Website!
+  </h3>
+  <div
+    data-testid="companyNameEl"
+  >
+    Cognizant
+  </div>
+  <p>
+    Employee Count:
+  </p>
+  <p
+    data-testid="employeeCountEl"
+    style={
+      Object {
+        "color": "#0000ff",
+      }
+    }
+  >
+    318000+
+  </p>
+  <input
+    onChange={[Function]}
+    placeholder="Enter Country"
+    type="text"
+    value=""
+  />
+</div>
+`;

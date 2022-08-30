@@ -1,5 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Company from "./Company";
+import renderer from 'react-test-renderer';
 
 describe('CompanyComponent', () => { 
 
@@ -49,8 +50,7 @@ describe('CompanyComponent', () => {
 
     // if you are working with color code -- try the following 
     // use  rgb code or hexadecimal
-    expect(screen.getByTestId('employeeCountEl'))
-    .toHaveStyle('color: #0000ff');
+    expect(screen.getByTestId('employeeCountEl')).toHaveStyle('color: #0000ff');
   });
 
 
@@ -62,11 +62,30 @@ describe('CompanyComponent', () => {
   // Test Spec #6
   it(`has an input element with placeholder 'Enter Country'`, () => {
     render(<Company />);
-    expect(screen.getByPlaceholderText('Enter Country'))
-    .toBeTruthy();
+    expect(screen.getByPlaceholderText('Enter Country')).toBeTruthy();
   });
 
-  // Testp Spec #7. Testing events, useState hook
-  
+  // Test Spec #7. Testing events, useState hook
+  it(`should update country on onChange event`, () => {
+    render(<Company />);
+    // find the element with placeholder 'Enter Country' 
+    const countryInput = screen.getByPlaceholderText('Enter Country');
+    // now checking if onChange is working or not 
+    // mock fire change event with the mock value -- all thru program
+    fireEvent.change(countryInput, { target: {value: 'Canada'}});
+    // finally checking if the value of input element is showing the entered country or not
+    expect(countryInput.value).toBe('Canada');
+  });
 
+  // Snapshot Testing
+  it('should have right company comp snapshot', () => {
+    // to take snapshot -- we need a tool named react-test-renderer (npm i react-test-renderer )
+    // taking a snapshot and convert it into JSON
+    // [RECOMMENDED]: Take snapshots with necessary props
+    const snapshotJSON = renderer.create(<Company name='Cognizant'/>).toJSON();
+    // let's assert with a matcher toMatchSnapshot() from jest
+    expect(snapshotJSON).toMatchSnapshot();
+  }); 
+
+  
 })

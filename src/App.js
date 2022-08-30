@@ -1,6 +1,7 @@
 import './App.css';
 import About from './components/About/About';
 import Company from './components/Company/Company';
+import Counter from './components/Counter/Counter';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <hr/>
       <Company name="Cognizant"/>
       
+      <hr/>
+      <Counter />
     </div>
   );
 }
