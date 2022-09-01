@@ -2,6 +2,7 @@ import './App.css';
 import About from './components/About/About';
 import Company from './components/Company/Company';
 import Counter from './components/Counter/Counter';
+import Todos from './components/Todos/Todos';
 import Movies from './containers/Movies/Movies';
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
 
       <hr />
       <Movies info={movieInfo}/>
+
+      <hr/>
+      <Todos />
     </div>
   );
 }
