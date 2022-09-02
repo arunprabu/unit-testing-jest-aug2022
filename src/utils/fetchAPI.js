@@ -5,7 +5,6 @@ export const fetchApi = (url, method) => {
 
   return fetch(url, )
     .then( (res) => {
-      console.log(res);
       if(res && res.status === 200){
         return res.json();
       }else{
