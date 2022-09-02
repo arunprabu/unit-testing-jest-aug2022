@@ -3,6 +3,7 @@ import About from './components/About/About';
 import Company from './components/Company/Company';
 import Counter from './components/Counter/Counter';
 import Todos from './components/Todos/Todos';
+import Users from './components/Users/Users';
 import Movies from './containers/Movies/Movies';
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
 
       <hr/>
       <Todos />
+
+      <hr/>
+      <Users />
     </div>
   );
 }
