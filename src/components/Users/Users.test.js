@@ -8,6 +8,7 @@ jest.mock('../../utils/fetchAPI'); // Mocks a module with an auto-mocked version
 describe('UsersComponent', () => {
 
   // Let's have the mock data to serve upon the network call
+  // Called as stub
   const mockUserList = [
     {
       id: 1,
@@ -28,6 +29,7 @@ describe('UsersComponent', () => {
     // 1. Have mock data
     // 2. Intercept the network call
     // 3. resolve with the above mock data (successful api call)
+    // TODO: // learn about mocking error case (reject)
 
     fetchApi.mockResolvedValue(mockUserList);
 

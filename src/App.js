@@ -2,6 +2,7 @@ import './App.css';
 import About from './components/About/About';
 import Company from './components/Company/Company';
 import Counter from './components/Counter/Counter';
+import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher';
 import Todos from './components/Todos/Todos';
 import Users from './components/Users/Users';
 import Movies from './containers/Movies/Movies';
@@ -34,6 +35,9 @@ function App() {
 
       <hr/>
       <Users />
+
+      <hr/>
+      <ThemeSwitcher />
     </div>
   );
 }
