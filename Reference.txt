@@ -111,4 +111,15 @@ Let's create the project
 npx create-react-app unit-testing-jest-aug2022
 
 ---
+
+Enzyme 
+--
+  Setup: 
+    npm i enzyme @wojtekmaj/enzyme-adapter-react-17 --save-dev 
+  
+    Also Refer setupTests.js file in cra-based react project 
+
+--
+    
+
   

@@ -37,6 +37,13 @@ describe('UsersComponent', () => {
     await waitFor( () => {
       expect(screen.getByText('Steve Smith')).toBeInTheDocument();
     });
+  });
 
+  it('renders error in comp properly with API data [MOCKING]', async() => { 
+    fetchApi.mockRejectedValue(new Error('error'));
+    render(<Users />);
+    await waitFor( () => {
+      expect(screen.getByText('Unable to load Users. Try again')).toBeInTheDocument();
+    });
   });
 });
