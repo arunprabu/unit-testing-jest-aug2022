@@ -22,9 +22,11 @@ const ThemeSwitcher = () => {
 
   return (
     <div style={theme === 'light'? myTheme.light : myTheme.dark}>
-      <h2>ThemeSwitcher | User Generated Event</h2>
+      <h2>ThemeSwitcher | User Generated Event and Enzyme</h2>
       <p>Current Theme: {theme}</p>
       <button onClick={handleToggleTheme}>Switch Theme</button>
+      <br /><br />
+      <a href="https://enzymejs.github.io/enzyme/docs">Refer Enzyme Examples</a>
     </div>
   )
 }
